@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul's Portfolio - Number One in the World</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            animation: fadeInUp 1s ease-out 0.5s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes rotateIn {
+            from { opacity: 0; transform: rotate(-360deg); }
+            to { opacity: 1; transform: rotate(0); }
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #about {
+            background-color: #fff;
+        }
+
+        #skills {
+            background-color: #f9f9f9;
+        }
+
+        #experience {
+            background-color: #fff;
+        }
+
+        #contact {
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #2196F3;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: pulse 2s infinite;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul li {
+            background: #2196F3;
+            color: white;
+            margin: 10px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: rotateIn 1s ease-out;
+        }
+
+        ul li:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        /* Contact Form */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            header p { font-size: 1.2em; }
+            h2 { font-size: 2em; }
+            ul li { font-size: 1em; padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Atul's Portfolio</h1>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Atul, a passionate developer and AI enthusiast. I've completed an advanced AI course, mastering Python, HTML, CSS, Machine Learning (ML), and more. My goal is to be number one in the world in all tech domains.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Machine Learning (ML)</li>
+            <li>Artificial Intelligence (AI)</li>
+            <li>JavaScript</li>
+            <li>Data Science</li>
+            <li>Web Development</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>My Experience</h2>
+        <p>I've successfully completed a comprehensive AI course, where I gained hands-on experience in building ML models, web applications using HTML/CSS/Python, and deploying AI solutions. This has positioned me as a top-tier expert ready to tackle any challenge.</p>
+        <p>Prior experiences include personal projects in web design, data analysis, and AI automation, making my portfolio unmatched worldwide.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Reach out to me for collaborations or opportunities!</p>
+        <form action="#" method="post">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Email: atulsehwag2006@gmail.com | Phone: +919306658048| LinkedIn:https://www.linkedin.com/in/atul-sehwag-689328369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Atul. All rights reserved. Number One in the World!</p>
+    </footer>
+
+    <script>
+        // JavaScript for scroll animations
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
